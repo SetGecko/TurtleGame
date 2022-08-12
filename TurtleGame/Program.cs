@@ -16,11 +16,19 @@ namespace TurtleGame
 
             GraphicsWindow.BrushColor = "Red";
             var eat = Shapes.AddRectangle(10, 10);
-            Shapes.Move(eat, 200, 200);
+            int x = 200;
+            int y = 200;
+            Shapes.Move(eat, x, y);
+
 
             while (true)         
             {
                 Turtle.Move(10);
+                if (Turtle.X >= x && Turtle.X <= x+10 && Turtle.Y >= y && Turtle.Y <= y+10)
+                {
+                    x = x + 20;
+                    Shapes.Move(eat, x, y);
+                }
             }
         }
 
