@@ -13,7 +13,12 @@ namespace TurtleGame
         {
             GraphicsWindow.KeyDown += GraphicsWindow_KeyDown;
             Turtle.PenUp();
-            while(true)
+
+            GraphicsWindow.BrushColor = "Red";
+            var eat = Shapes.AddRectangle(10, 10);
+            Shapes.Move(eat, 200, 200);
+
+            while (true)         
             {
                 Turtle.Move(10);
             }
